@@ -1,0 +1,69 @@
+:root{
+    font-family: 'Raleway', sans-serif;
+    box-sizing: border-box;
+}
+body{
+    background-size: 100%;
+}
+#content{
+    width: 100%;
+    min-height: 100vh;
+    background-color: rgba(0,0,0,0.7);
+    display: grid;
+    grid-template-rows: auto 2fr;
+}
+.header-container{
+    background-color: rgba(0,0,0,0.5);
+}
+.header-text{
+    color: white;
+    width: fit-content;
+    margin: auto;
+    font-size: 4rem;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 900;
+    padding: 1.5rem;
+}
+.nav-container{
+    display: flex;
+    position:relative;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 10rem;
+    padding: 1rem;
+
+}
+.nav-item{
+    color: white;
+    font-size: 1.5rem;
+    padding: 0.5rem;
+    border-bottom: 1px solid rgba(0,0,0,0);
+    transition: transform 0.15s;
+}
+.nav-item:hover{
+    transform: translateY(-10px);
+    transition: transform 0.15s;
+}
+#main-container{
+    box-sizing: border-box;
+    height: 100%;
+    padding: 10rem 15rem;
+}
+.main-grid-container{
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.content-container{
+    min-height: 100%;
+}
+#pic-container{
+    border-radius: 1rem 0 0 1rem;
+
+    background-color: red;
+}
+#item-2{
+    border-radius: 0 1rem 1rem 0;
+    background-color: blue;
+}
