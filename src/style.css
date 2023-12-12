@@ -4,6 +4,13 @@
 }
 body{
     background-size: 100%;
+    background-image: url(./images/main-background-pic.jpeg);
+}
+.main-font-color{
+    color: white;
+}
+.click{
+    border-bottom: 0.1rem solid white;
 }
 #content{
     width: 100%;
@@ -38,7 +45,6 @@ body{
     color: white;
     font-size: 1.5rem;
     padding: 0.5rem;
-    border-bottom: 1px solid rgba(0,0,0,0);
     transition: transform 0.15s;
 }
 .nav-item:hover{
@@ -54,15 +60,47 @@ body{
     height: 100%;
     display: grid;
     grid-template-columns: 1fr 1fr;
+    box-shadow: 1.25rem 0.25rem 1.5rem rgba(0, 0, 0, 0.73);
 }
 .content-container{
     min-height: 100%;
 }
-#pic-container{
+#home-card-pic-container{
     border-radius: 1rem 0 0 1rem;
-    background-color: red;
+    background-image: 
+        linear-gradient(45deg, rgba(97, 97, 97, 0.52), rgba(0, 0, 0, 0.33)),url(./images/card-img.jpeg);
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-position: 35% 55%;
 }
-#item-2{
+#home-card-content-container{
     border-radius: 0 1rem 1rem 0;
-    background-color: blue;
+    background-color: rgba(0, 0, 0, 0.73);
+    padding: 1.5rem;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+#main-card-header-text{
+    font-size: 3.5rem;
+    font-weight: 700;
+}
+#main-card-paragraph{
+    font-size: 1.45rem;
+    font-weight: 500;
+    line-height: 1.75rem;
+}
+#main-card-button{
+    width: 12rem;
+    font-size: 1.7rem;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
+    margin-top: auto;
+    margin-right: auto;
+    background-color: rgb(153, 29, 29);
+    border: 0px;
+    border-radius: 0.25rem;
+    padding: 1rem;
+    color: white;
 }
