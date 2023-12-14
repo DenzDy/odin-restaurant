@@ -2,6 +2,7 @@ import './style.css';
 import './reset.css';
 import './images/main-background-pic.jpeg';
 import initialize_home from './home.js';
+import load_menu from './menu.js';
 function click_handling(nav_item){
     const nav_items = document.getElementsByClassName("nav-item");
     Array.from(nav_items).forEach(element => {
@@ -16,11 +17,22 @@ function select_initializer(nav_item){
         case "home":
             clear_main();
             document.body.querySelector("#content").appendChild(initialize_home());
+            break;
+        case "menu":
+            clear_main();
+            document.body.querySelector("#content").appendChild(load_menu());
+            break;
+        case "contact":
+            clear_main();
+            document.body.querySelector("#content").appendChild(load_menu());
+            break;
     }
 }
 function clear_main(){
     const main = document.getElementById("main-container");
-    main.remove();
+    if(main !== null){
+        main.remove();
+    }
 }
 function initialize_nav(){
     const nav_container = document.createElement('div');
@@ -53,5 +65,8 @@ function initialize_header(){
     return header_container;
     
 }
-document.body.querySelector("#content").appendChild(initialize_header());
-document.body.querySelector("#content").appendChild(initialize_home());
+function load_website(){
+    document.body.querySelector("#content").appendChild(initialize_header());
+    document.body.querySelector("#content").appendChild(initialize_home());
+}
+load_website();
